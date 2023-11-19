@@ -7,7 +7,7 @@ with open(r"C:\Users\ogulc\OneDrive\Masaüstü\visual\ssh\wordlist.txt","r",enco
     uzunluk = len(dosya)
 
 while devam:
-    çıktı = subprocess.run(f'cmd /c "python "C:\\Users\\ogulc\\OneDrive\\Masaüstü\\visual\\ssh\\ssh_brute_force.py" -b {sayi}"',shell=True,capture_output=True,text=True)
+    çıktı = subprocess.run(f'cmd /c "python "C:\\Users\\ogulc\\OneDrive\\Masaüstü\\visual\\ssh\\ssh_brute_force.py" -b {sayi}"',shell=True,capture_output=True,text=True) #main.py adlı dosyanın yolunu yazın 
     print(çıktı.stdout) #çıktıyı görmeniz icin yazdırdım
     if "şifre" in str(çıktı.stdout):
         devam = False # şifre bulunduysa while döngüsünü sonlandırır
